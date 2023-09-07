@@ -3,7 +3,7 @@
     <?php
     $url_path = $_SERVER['REQUEST_URI'];
     $url_parts = explode('/', $url_path);
-    
+
     // Boucle pour générer les liens du breadcrumb
     $breadcrumb = '';
     $url_segment = ROOT_URL;
@@ -11,7 +11,7 @@
         if ($part !== '') {
             $url_segment .= $part . '/';
             $page_title = ucwords(str_replace(array('-', '.php', '?id='), ' ', $part));
-            
+
             // Modifier l'affichage du lien si c'est la page add-car-images.php
             if ($part === 'add-car-images.php' && isset($_GET['id'])) {
                 $breadcrumb .= '<li><a href="' . ROOT_URL . 'admin/add-car-images.php">Ajouter des images</a></li>';
