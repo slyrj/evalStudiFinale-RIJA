@@ -31,12 +31,9 @@ include 'partials/header.php';
                         <td>27/05/2023</td>
                         <td> <a href="index.html" class="btn btn-primary">Ajouter une option</a> </td>
                         <td>
-                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"
-                                    style="color: #2d2e2f;"></i></a>
-                            <a href="index.html" class="btn btn-primary"><i class="fa-regular fa-images"
-                                    style="margin-left: 10px;"></i></a>
-                            <a href="index.html" class="btn btn-primary"> <i class="fa-solid fa-trash-can"
-                                    style="color: #434446;"></i> </a>
+                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-pen-to-square" style="color: #2d2e2f;"></i></a>
+                            <a href="index.html" class="btn btn-primary"><i class="fa-regular fa-images" style="margin-left: 10px;"></i></a>
+                            <a href="index.html" class="btn btn-primary"> <i class="fa-solid fa-trash-can" style="color: #434446;"></i> </a>
                         </td>
                     </tr>
                     <tr>
@@ -49,12 +46,9 @@ include 'partials/header.php';
                         <td>27/05/2023</td>
                         <td> <a href="index.html" class="btn btn-primary">Ajouter une option</a> </td>
                         <td>
-                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"
-                                    style="color: #2d2e2f;"></i></a>
-                            <a href="index.html" class="btn btn-primary"><i class="fa-regular fa-images"
-                                    style="margin-left: 10px;"></i></a>
-                            <a href="index.html" class="btn btn-primary"> <i class="fa-solid fa-trash-can"
-                                    style="color: #434446;"></i> </a>
+                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-pen-to-square" style="color: #2d2e2f;"></i></a>
+                            <a href="index.html" class="btn btn-primary"><i class="fa-regular fa-images" style="margin-left: 10px;"></i></a>
+                            <a href="index.html" class="btn btn-primary"> <i class="fa-solid fa-trash-can" style="color: #434446;"></i> </a>
                         </td>
                     </tr>
                     <tr>
@@ -67,12 +61,9 @@ include 'partials/header.php';
                         <td>27/05/2023</td>
                         <td> <a href="index.html" class="btn btn-primary">Ajouter une option</a> </td>
                         <td>
-                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"
-                                    style="color: #2d2e2f;"></i></a>
-                            <a href="index.html" class="btn btn-primary"><i class="fa-regular fa-images"
-                                    style="margin-left: 10px;"></i></a>
-                            <a href="index.html" class="btn btn-primary"> <i class="fa-solid fa-trash-can"
-                                    style="color: #434446;"></i> </a>
+                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-pen-to-square" style="color: #2d2e2f;"></i></a>
+                            <a href="index.html" class="btn btn-primary"><i class="fa-regular fa-images" style="margin-left: 10px;"></i></a>
+                            <a href="index.html" class="btn btn-primary"> <i class="fa-solid fa-trash-can" style="color: #434446;"></i> </a>
                         </td>
                     </tr>
                     <tr>
@@ -85,12 +76,9 @@ include 'partials/header.php';
                         <td>27/05/2023</td>
                         <td> <a href="index.html" class="btn btn-primary">Ajouter une option</a> </td>
                         <td>
-                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"
-                                    style="color: #2d2e2f;"></i></a>
-                            <a href="index.html" class="btn btn-primary"><i class="fa-regular fa-images"
-                                    style="margin-left: 10px;"></i></a>
-                            <a href="index.html" class="btn btn-primary"> <i class="fa-solid fa-trash-can"
-                                    style="color: #434446;"></i> </a>
+                            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-pen-to-square" style="color: #2d2e2f;"></i></a>
+                            <a href="index.html" class="btn btn-primary"><i class="fa-regular fa-images" style="margin-left: 10px;"></i></a>
+                            <a href="index.html" class="btn btn-primary"> <i class="fa-solid fa-trash-can" style="color: #434446;"></i> </a>
                         </td>
                     </tr>
                 </tbody>

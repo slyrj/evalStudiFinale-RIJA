@@ -10,8 +10,6 @@ if (isset($_POST['submit'])) {
         exit();
     }
     // Récupération des données du formulaire
-    // $email = filter_var($_POST['email'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $password = filter_var($_POST['password']);
 
     // Validation des entrées

@@ -32,6 +32,5 @@ if (isset($_GET['id'])) {
 } else {
     $_SESSION['delete-image-error'] = "ID d'image non fourni.";
 }
-
 header('Location: ' . ROOT_URL . 'admin/add-car-images.php?id=' . $image['cars_id']);
 exit();

@@ -50,9 +50,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 }
-
-// **REMARQUE**
-// utilisation des : avant chaque nom de colonne dans la requête SQL pour 
-// définir des paramètres ou des variables liées dans une requête SQL préparée.
-//  pour sécuriser  en empêchant les attaques par injection SQL et en permettant 
-//  la réutilisation des requêtes avec des valeurs différentes sans avoir à reconstruire la requête à chaque fois.
