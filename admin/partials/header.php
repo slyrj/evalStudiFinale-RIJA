@@ -24,18 +24,17 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav pull-right">
-                <li class="active"><a href="index.html">services-prestations </a></li>
-                <li class="active"><a href="admin-index.html">Gérer les voitures</a></li>
-                <li class="active"><a href="messages.html">Messages</a></li>
-                <li class="dropdown"><a href="#">Espace Admin</a>
-                    <ul>
-                        <li><a href="admin-index.html">Gérer les utilisateurs </a></li>
-                        <li><a href="services-prestations.html">Gérer les services </a></li>
-                        <li><a href="avis-clients.html">Gérer les témoignages</a></li>
-                        <li><a href="statut-garage.html">Gérer les horaires </a></li>
-                    </ul>
+                <li class="nav-link active"><a href="<?= ROOT_URL ?>index.php" target="_blank">Voir le site</a></li>
+                <li><a class="nav-link" href="<?= ROOT_URL . "admin/" ?>">Gérer les voitures</a></li>
+                <li><a class="nav-link" href="<?= ROOT_URL . "admin/messages.php" ?>">Lire les messages</a></li>
+                <li><a class="nav-link" href="<?= ROOT_URL . 'admin/manage-reviews.php' ?>">Gérer les
+                        témoignages</a></li>
+                <?php if ($_SESSION['user_is_admin'] == 1) : ?>
+                    <?php include 'admin-menu.php'; ?>
+                <?php endif; ?>
+                <li><a class="nav-link" class="exit" href="<?= ROOT_URL . "connexion.php" ?>">Se déconnecter</a>
                 </li>
-                <li class="active"><a href="#">Se déconnecter</a></li>
+                <li></li>
             </ul>
         </div>
     </div>
