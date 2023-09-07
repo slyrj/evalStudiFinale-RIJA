@@ -1,88 +1,61 @@
 <?php
 include 'partials/header.php';
-?>
-<section class="destination" id="destination">
-    <div class="heading">
-        <span>Nos véhicules d'occasions</span>
-        <h1>Des voitures comme neuves !!</h1>
-    </div>
-    <div class="box-container">
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="images/gallery-img-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Porsh</h3>
-                <p>15000 €</p>
-                <p>Année : 2017</p>
-                <p>Kilométrage : 50000 km</p>
-                <a href="#">Voir plus <i class="fas fa-angle-right"></i></a>
-            </div>
-        </div>
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="images/gallery-img-8.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Porsh</h3>
-                <p>15000 €</p>
-                <p>Année : 2017</p>
-                <p>Kilométrage : 50000 km</p>
-                <a href="#">Voir plus <i class="fas fa-angle-right"></i></a>
-            </div>
-        </div>
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="images/gallery-img-7.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Porsh</h3>
-                <p>15000 €</p>
-                <p>Année : 2017</p>
-                <p>Kilométrage : 50000 km</p>
-                <a href="#">Voir plus <i class="fas fa-angle-right"></i></a>
-            </div>
-        </div>
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="images/gallery-img-5.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Porsh</h3>
-                <p>15000 €</p>
-                <p>Année : 2017</p>
-                <p>Kilométrage : 50000 km</p>
-                <a href="#">Voir plus <i class="fas fa-angle-right"></i></a>
-            </div>
-        </div>
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="images/gallery-img-6.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Porsh</h3>
-                <p>15000 €</p>
-                <p>Année : 2017</p>
-                <p>Kilométrage : 50000 km</p>
-                <a href="#">Voir plus <i class="fas fa-angle-right"></i></a>
-            </div>
-        </div>
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="images/gallery-img-2.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Porsh</h3>
-                <p>15000 €</p>
-                <p>Année : 2017</p>
-                <p>Kilométrage : 50000 km</p>
-                <a href="#">Voir plus <i class="fas fa-angle-right"></i></a>
-            </div>
-        </div>
+$query = "SELECT * FROM cars";
+$result = mysqli_query($connection, $query);
 
+// Boucle à travers les résultats et ajouter chaque voiture au tableau $cars
+while ($row = mysqli_fetch_assoc($result)) {
+    $cars[] = $row;
+}
+?>
+<div class="banner">
+    <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+        <span>Nos voitures d'occasions </span>
+        <h3>Venez chercher votre bonheur</h3>
+        <p>Parcourez notre sélection exclusive de véhicules d'occasion. La qualité et la performance sont à portée de
+            main.</p>
+    </div>
+</div>
+<form>
+    <div class="filter" data-price="<?php echo $car['price']; ?>" data-mileage="<?php echo $car['mileage']; ?>" data-year="<?php echo $car['year']; ?>">
+        <div class="content">
+            <label for="price-range">Fourchette de prix :</label>
+            <input class="custom-slider car" type="range" id="price-range" class="form-range" min="1000" max="500000" step="500">
+            <span id="price-value"></span>
+        </div>
+        <div class="content">
+            <label for="mileage-range">Nombre de kilomètres :</label>
+            <input class="custom-slider" type="range" id="mileage-range" class="form-range" min="0" max="150000" step="5000">
+            <span id="mileage-value"></span>
+        </div>
+        <div class="content">
+            <label for="year-select">Année de mise en circulation :</label>
+            <select id="year-select" class="form-select">
+                <option value="0">Toutes</option>
+                <option value="2018">2018 et plus récentes</option>
+                <option value="2015">2015 et plus récentes</option>
+                <option value="2010">2010 et plus récentes</option>
+                <option value="2005">2005 et plus récentes</option>
+            </select>
+        </div>
+    </div>
+</form>
+<section class="sale" id="sale">
+    <div class="box-container">
+        <?php foreach ($cars as $car) : ?>
+            <div class="box" data-aos="fade-up" data-aos-delay="150" data-price="<?php echo $car['price']; ?>" data-mileage="<?php echo $car['mileage']; ?>" data-year="<?php echo $car['year']; ?>">
+                <div class="image">
+                    <img src="<?php echo ROOT_URL . '/admin/assets/images/' . $car['image']; ?>" alt="">
+                </div>
+                <div class="content">
+                    <h3><?php echo $car['name']; ?></h3>
+                    <p class="car-price">Prix : <?php echo $car['price']; ?> €</p>
+                    <p class="car-year">Année : <?php echo $car['year']; ?></p>
+                    <p class="car-mileage">Kilométrage : <?php echo $car['mileage']; ?> km</p>
+                    <a href="<?php echo ROOT_URL . '/voiture.php?id=' . $car['id']; ?>">Voir plus <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 </section>
-
-<?php
-include 'partials/header.php';
-?>
+<?php include 'partials/footer.php'; ?>

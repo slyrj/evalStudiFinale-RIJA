@@ -24,8 +24,12 @@ $pageTitle = $titleMappings[$currentUrl] ?? 'Titre par défaut';
     <title>
         <?= isset($titleMappings[$currentUrl]) ? $titleMappings[$currentUrl] : 'Page d\'administration' ?><?= $garageTitle ?>
     </title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="shortcut icon" href="assets/images/gt_favicon.png">
     <link rel="stylesheet" href="admin/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?= ROOT_URL . 'admin/assets/css/main.css' ?>">
     <link rel="stylesheet" href="<?= ROOT_URL . 'admin/assets/css/bootstrap.min.css' ?>">
 </head>
@@ -39,7 +43,8 @@ $pageTitle = $titleMappings[$currentUrl] ?? 'Titre par défaut';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"><img src="<?= ROOT_URL . 'images/logo.png' ?>" class="logo" alt="image-logo" width="150" height="50"></a>
+                <a class="navbar-brand" href="index.php"><img src="<?= ROOT_URL . 'images/logo.png' ?>" class="logo"
+                        alt="image-logo" width="150" height="50"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
@@ -49,7 +54,7 @@ $pageTitle = $titleMappings[$currentUrl] ?? 'Titre par défaut';
                     <li><a class="nav-link" href="<?= ROOT_URL . 'admin/manage-reviews.php' ?>">Gérer les
                             témoignages</a></li>
                     <?php if ($_SESSION['user_is_admin'] == 1) : ?>
-                        <?php include 'admin-menu.php'; ?>
+                    <?php include 'admin-menu.php'; ?>
                     <?php endif; ?>
                     <li><a class="nav-link" class="exit" href="<?= ROOT_URL . "connexion.php" ?>">Se déconnecter</a>
                     </li>

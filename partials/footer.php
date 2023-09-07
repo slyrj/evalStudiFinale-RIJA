@@ -1,19 +1,15 @@
+<?php ?>
 <section class="footer">
     <div class="box-container">
         <div class="box" data-aos="fade-up" data-aos-delay="450">
             <h3>Statut</h3>
-            <p> <i class="fa-solid fa-door-closed"></i><br><br>
-                Actuellement fermé </p>
-            <!-- <i class="fa-solid fa-door-open"></i> -->
+            <?php include 'partials/status-query.php';
+            ?>
         </div>
         <div class="box" data-aos="fade-up" data-aos-delay="600">
             <h3>Horaires d'ouverture</h3>
-            <p><i class="fa-regular fa-clock"></i>Lundi : 06:06 - 22:07s</p>
-            <p><i class="fa-regular fa-clock"></i>Mardi : 03:07 - 21:07</p>
-            <p><i class="fa-regular fa-clock"></i>Mercredi : 06:45 - 12:00</p>
-            <p><i class="fa-regular fa-clock"></i>Jeudi : 05:06 - 20:07</p>
-            <p><i class="fa-regular fa-clock"></i>Vendredi : 07:00 - 19:00</p>
-            <p><i class="fa-regular fa-clock"></i>Samedi : 06:30 - 17:00</p>
+            <?php include 'partials/time-query.php';
+            ?>
         </div>
         <div class="box" data-aos="fade-up" data-aos-delay="300">
             <h3>Liens du site</h3>
@@ -38,14 +34,17 @@
 <div class="credit">
     <p>&copy; 2023 Garage V-Parrot. Tous droits réservés.</p>
 </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="js/script.js"></script>
+<script src="/assets/js/script.js"></script>
+
 <script>
     AOS.init({
         duration: 800,
-        offset: 150,
+        offset: 100,
     });
 </script>
+
 </body>
 
 </html>

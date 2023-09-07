@@ -13,6 +13,7 @@ unset($_SESSION['signup-data']);
 
 <div class="container">
     <div class="row">
+        <!-- Article main content -->
         <article class="col-xs-12 maincontent">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                 <div class="panel panel-default">
@@ -69,4 +70,5 @@ unset($_SESSION['signup-data']);
         </article>
     </div>
 </div>
+
 <?php include 'partials/footer.php'; ?>

@@ -1,78 +1,60 @@
 <?php
 include 'partials/header.php';
+
+// Check si User connecté, sinon redirigez-le vers la page de connexion
+if (!isset($_SESSION['user_id'])) {
+    header('Location: connexion.php');
+    exit();
+}
+
+// Récupération des messages depuis la base de données
+$query = "SELECT * FROM contact_forms";
+$messagesStatement = $pdo->query($query);
+$messages = $messagesStatement->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<div class="row">
-    <div class="col-md-12">
-        <h2>Gestion des messages</h2>
-        <div class="car-manage table-responsive">
-            <a href="index.html" class="btn btn-primary">Ajouter une voiture</a>
-            <table class="table table-bordered">
-                <thead>
+<div class="container-sm">
+    <div class="message">
+        <?php
+        if (isset($_SESSION['delete-message-success'])) :
+            echo '<p class="text-center text-muted msg-alert"><font color="green">' . $_SESSION['delete-message-success'] . '</font></p>';
+            unset($_SESSION['delete-message-success']);
+            echo '<hr>';
+        elseif (isset($_SESSION['delete-message-error'])) :
+            echo '<p class="text-center text-muted msg-alert"><font color="red">' . $_SESSION['delete-message-error'] . '</font></p>';
+            unset($_SESSION['delete-message-error']);
+            echo '<hr>';
+        endif;
+        ?>
+    </div>
+    <h2>Messages reçus</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Objet</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($messages as $message) : ?>
                     <tr>
-                        <th>ID</th>
-                        <th>Nom</th>
-                        <th>Email</th>
-                        <th>Objet</th>
-                        <th>Date</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>3</td>
-                        <td>John</td>
-                        <td>doe@mail.com</td>
-                        <td>Golf</td>
-                        <td>27/05/2023</td>
+                        <td><?php echo $message['id']; ?></td>
+                        <td><?php echo $message['name']; ?></td>
+                        <p><strong>Email :</strong> <?= htmlspecialchars($message['email'], ENT_QUOTES, 'UTF-8'); ?></p>
+                        <td><?php echo $message['object']; ?></td>
+                        <td><?php echo $message['created_at']; ?></td>
                         <td>
-                            <a href="index.html" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></a>
-                            <a href="index.html" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i></a>
+                            <a href="view-message.php?id=<?php echo $message['id']; ?>" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></a>
+                            <a href="logic/delete-message.php?id=<?php echo $message['id']; ?>" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i></a>
                         </td>
                     </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>2</td>
-                        <td>Jo</td>
-                        <td>joe@mail.com</td>
-                        <td>Golf</td>
-                        <td>28/05/2023</td>
-                        <td>
-                            <a href="index.html" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></a>
-                            <a href="index.html" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i></a>
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>5</td>
-                        <td>Jane</td>
-                        <td>jane@mail.com</td>
-                        <td>Porsh</td>
-                        <td>22/03/2023</td>
-                        <td>
-                            <a href="index.html" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></a>
-                            <a href="index.html" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i></a>
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>6</td>
-                        <td>Jacques</td>
-                        <td>jacques@mail.com</td>
-                        <td>Renseignement</td>
-                        <td>12/06/2023</td>
-                        <td>
-                            <a href="index.html" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></a>
-                            <a href="index.html" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i></a>
-                        </td>
-                </tbody>
-            </table>
-        </div>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
 </div>
-</div>
-<?php
-include 'partials/footer.php';
-?>
+<?php include 'partials/footer.php'; ?>
