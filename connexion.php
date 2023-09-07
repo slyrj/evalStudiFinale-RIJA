@@ -6,8 +6,13 @@ session_start();
 if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); // Génère un jeton aléatoire
 }
+
 $email = $_SESSION['signup-data']['email'] ?? null;
 $password = $_SESSION['signup-data']['password'] ?? null;
+
+include 'partials/head.php';
+// include 'admin/functions.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,9 +28,8 @@ $password = $_SESSION['signup-data']['password'] ?? null;
 
     <link rel="stylesheet" href="/admin/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="admin/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom styles for our template -->
     <link rel="stylesheet" href="<?= ROOT_URL . '/admin/assets/css/bootstrap-theme.css' ?>" media="screen">
     <link rel="stylesheet" href="<?= ROOT_URL . '/admin/assets/css/main.css' ?>">
     <link rel="stylesheet" href="<?= ROOT_URL . 'assets/css/styles.css' ?>">
@@ -48,12 +52,12 @@ $password = $_SESSION['signup-data']['password'] ?? null;
                                 direction.</p>
                             <?php
                             if (isset($_SESSION['signin'])) : ?>
-                            <p class="text-center text-muted msg-alert">
-                                <font color="red">
-                                    <?= $_SESSION['signin'];
+                                <p class="text-center text-muted msg-alert">
+                                    <font color="red">
+                                        <?= $_SESSION['signin'];
                                         unset($_SESSION['signin']); ?> </font>
-                            </p>
-                            <hr>
+                                </p>
+                                <hr>
                             <?php
 
                             elseif (isset($_SESSION['signin-error'])) :
@@ -68,8 +72,7 @@ $password = $_SESSION['signup-data']['password'] ?? null;
                                 </div>
                                 <div class="top-margin">
                                     <label>Password <span class="text-danger">*</span></label>
-                                    <input type="password" value="<?= $password ?>" name="password"
-                                        class="form-control">
+                                    <input type="password" value="<?= $password ?>" name="password" class="form-control">
                                 </div>
                                 <hr>
                                 <div class="row">

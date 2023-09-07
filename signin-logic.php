@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'admin/config/database.php';
+
 if (isset($_POST['submit'])) {
     // Vérification du jeton CSRF
     if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
@@ -9,7 +10,9 @@ if (isset($_POST['submit'])) {
         header('location: ' . ROOT_URL . '/connexion.php');
         exit();
     }
+
     // Récupération des données du formulaire
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $password = filter_var($_POST['password']);
 
     // Validation des entrées
