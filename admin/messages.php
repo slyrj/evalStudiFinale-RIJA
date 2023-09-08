@@ -41,17 +41,19 @@ $messages = $messagesStatement->fetchAll(PDO::FETCH_ASSOC);
             </thead>
             <tbody>
                 <?php foreach ($messages as $message) : ?>
-                    <tr>
-                        <td><?php echo $message['id']; ?></td>
-                        <td><?php echo $message['name']; ?></td>
-                        <p><strong>Email :</strong> <?= htmlspecialchars($message['email'], ENT_QUOTES, 'UTF-8'); ?></p>
-                        <td><?php echo $message['object']; ?></td>
-                        <td><?php echo $message['created_at']; ?></td>
-                        <td>
-                            <a href="view-message.php?id=<?php echo $message['id']; ?>" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></a>
-                            <a href="logic/delete-message.php?id=<?php echo $message['id']; ?>" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i></a>
-                        </td>
-                    </tr>
+                <tr>
+                    <td><?php echo $message['id']; ?></td>
+                    <td><?php echo $message['name']; ?></td>
+                    <td><strong>Email :</strong> <?= htmlspecialchars($message['email'], ENT_QUOTES, 'UTF-8'); ?></td>
+                    <td><?php echo $message['object']; ?></td>
+                    <td><?php echo $message['created_at']; ?></td>
+                    <td>
+                        <a href="view-message.php?id=<?php echo $message['id']; ?>" class="btn btn-info btn-sm"><i
+                                class="fa-solid fa-eye"></i></a>
+                        <a href="logic/delete-message.php?id=<?php echo $message['id']; ?>"
+                            class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i></a>
+                    </td>
+                </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>

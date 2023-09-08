@@ -16,14 +16,15 @@ include 'partials/service-query.php';
     </div>
     <div class="box-container">
         <?php foreach ($services as $service) : ?>
-            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-                <img class="serv" src="admin/assets/images/<?php echo $service['image']; ?>" alt="Image <?php echo $service['nom']; ?>">
-                <h3><?php echo $service['nom']; ?> :</h3>
-                <?php foreach ($service['prestations'] as $prestation) : ?>
-                    <p><?php echo $prestation['nom']; ?></p>
-                <?php endforeach; ?>
-                <a href="contact.php" class="btn">Faire un devis</a>
-            </div>
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+            <img class="serv" src="admin/assets/images/<?php echo $service['image']; ?>"
+                alt="Image <?php echo $service['nom']; ?>">
+            <h3><?php echo $service['nom']; ?></h3>
+            <?php foreach ($service['prestations'] as $prestation) : ?>
+            <p><?php echo $prestation['nom']; ?></p>
+            <?php endforeach; ?>
+            <a href="contact.php" class="btn">Faire un devis</a>
+        </div>
         <?php endforeach; ?>
 </section>
 <?php include 'partials/footer.php'; ?>
