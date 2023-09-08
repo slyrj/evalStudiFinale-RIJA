@@ -52,9 +52,9 @@ include 'partials/voiture-query.php';
 </section>
 <div class="banner">
     <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
-        <span>cette voiture vous intéresse</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatum praesentium amet quibusdam quam
-            officia suscipit odio.</p>
+        <span>Cette voiture vous intéresse</span>
+        <p>Merci de nous laisser un message et de remplir les champs demandés. Nous reviendrons vers vous le plus
+            rapidement possible.</p>
     </div>
 </div>
 <section class="car-form" id="car-form">

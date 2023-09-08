@@ -14,12 +14,14 @@ include 'partials/head.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<?= isset($descriptions[$_SERVER['REQUEST_URI']]) ? $descriptions[$_SERVER['REQUEST_URI']] : $defaultDescription ?>">
-    <meta name="keywords" content="<?= isset($keywords[$_SERVER['REQUEST_URI']]) ? $keywords[$_SERVER['REQUEST_URI']] : $defaultKeywords ?>">
+    <meta name="description"
+        content="<?= isset($descriptions[$_SERVER['REQUEST_URI']]) ? $descriptions[$_SERVER['REQUEST_URI']] : $defaultDescription ?>">
+    <meta name="keywords"
+        content="<?= isset($keywords[$_SERVER['REQUEST_URI']]) ? $keywords[$_SERVER['REQUEST_URI']] : $defaultKeywords ?>">
     <title>
         <?= isset($titles[$_SERVER['REQUEST_URI']]) ? $titles[$_SERVER['REQUEST_URI']] . $garageTitle : 'Garage-V-Parrot' . $garageTitle ?>
     </title>
-    <!-- lien cdn fon-awesome -->
+    <!-- lien cdn font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- liens personnalisés  -->
@@ -38,6 +40,5 @@ include 'partials/head.php';
             <a data-aos="zoom-in-left" data-aos-delay="450" href="services.php">Nos Services </a>
             <a data-aos="zoom-in-left" data-aos-delay="600" href="ventes.php">Véhicules Occasions</a>
             <a data-aos="zoom-in-left" data-aos-delay="750" href="contact.php">Contact</a>
-            <!-- <a data-aos="fade-up" data-aos-delay="600" href="login.html" class="btn-nav">S'identifier</a> -->
         </nav>
     </header>
