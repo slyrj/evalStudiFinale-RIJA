@@ -7,7 +7,7 @@
 
 - Ouvrez votre 'invite des commandes'
 
-- Clonez le dépot  git 
+- Clonez le dépot  git ou téléchargez le dossier compressé (ZIP)
   => git clone https://github.com/slyrj/evalStudiFinale-RIJA.git
 
 ![clonnage dossier en image](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/clone.png)
@@ -19,6 +19,7 @@
 
 
   => votre mot de passe
+
   Crééz la base de données
 
   => CREATE DATABASE garage DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -142,6 +143,8 @@ VALUES ('Lundi', '08:30:00', '18:30:00', 1),
   ('Vendredi', '08:30:00', '18:30:00', 1),
   ('Samedi', '09:30:00', '15:00:00', 1);
 
+  **Le mot de passe de l'utilisateur(admin) 'vparrot@mail.fr' est 'garageparrot' 
+
 ### Méthode 2: Création automatique des tables (Site avec des données)
 
 - Après avoir créé la base de données 'garage', fermez mysql 
@@ -152,9 +155,22 @@ VALUES ('Lundi', '08:30:00', '18:30:00', 1),
 
  => mysql -u root -p garage < "le-chemin-versle-fichier"\garage_backup.sql
 
+ ![Image fichier backup dans dsossier sql](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/vsc.png)
+
+  **Le mot de passe de l'utilisateur(employé) 'john@doe.fr' est 'john@doe' 
 
  - Ouvrez le site  dans votre éditeur de code 
 
    => sur vscode 
 
-    ![alt text](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/vsc.png)
+    ![<image edit site avec vscode](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/vsc.png)
+
+- Configurez les fichiers admin/config/database.php et config/constants.php si besoin
+
+** admin/config/database.php **
+
+ ![<image fichier database.php](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/admin-config.png)
+
+ ** config/constants.php **
+
+ ![<image fichier database.php](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/constants.png)
