@@ -1,4 +1,4 @@
-# Site Garage-V-Parrot
+# Site Garage-V-Parrotgit
 
 
 
@@ -10,12 +10,12 @@
 - Clonez le dépot  git 
   => git clone https://github.com/slyrj/evalStudiFinale-RIJA.git
 
-![alt text](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/rdmd_imagesreadme-img/clone.png)
+![clonnage dossier en image](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/clone.png)
 
 - Ouvrez mysql de votre environnement local
   =>  C:\xampp\mysql\bin>  mysql.exe -u root -p
 
-  ![alt text](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/rdmd_imagesreadme-img/mysql.png)
+  ![session mysql en image](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/mysql.png)
 
 
   => votre mot de passe
@@ -157,4 +157,4 @@ VALUES ('Lundi', '08:30:00', '18:30:00', 1),
 
    => sur vscode 
 
-    ![alt text](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/rdmd_imagesreadme-img/vsc.png)
+    ![alt text](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/vsc.png)
