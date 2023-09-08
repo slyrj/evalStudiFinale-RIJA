@@ -32,7 +32,7 @@ include 'partials/head.php';
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
         <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <img src="images/logo.png
-        " alt="" width="150" height="50"></a>
+        " alt="logo-garage-V-parrot" width="120" height="30"></a>
         <nav class="navbar">
             <a data-aos="zoom-in-left" data-aos-delay="300" href="index.php">Accueil</a>
             <a data-aos="zoom-in-left" data-aos-delay="450" href="services.php">Nos Services </a>
