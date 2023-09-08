@@ -32,7 +32,8 @@
     </div>
 </section>
 <div class="credit">
-    <p>&copy; 2023 Garage V-Parrot. Tous droits réservés.|<a href="/privacy-policy.php">Politique de Confidentialité</a>
+    <p>&copy; 2023 Garage V-Parrot. Tous droits réservés. | <a href="/privacy-policy.php">Politique de
+            Confidentialité</a>
     </p>
 </div>
 
@@ -40,10 +41,10 @@
 <script src="/assets/js/script.js"></script>
 
 <script>
-AOS.init({
-    duration: 800,
-    offset: 100,
-});
+    AOS.init({
+        duration: 800,
+        offset: 100,
+    });
 </script>
 
 </body>

@@ -14,10 +14,8 @@ include 'partials/head.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="<?= isset($descriptions[$_SERVER['REQUEST_URI']]) ? $descriptions[$_SERVER['REQUEST_URI']] : $defaultDescription ?>">
-    <meta name="keywords"
-        content="<?= isset($keywords[$_SERVER['REQUEST_URI']]) ? $keywords[$_SERVER['REQUEST_URI']] : $defaultKeywords ?>">
+    <meta name="description" content="<?= isset($descriptions[$_SERVER['REQUEST_URI']]) ? $descriptions[$_SERVER['REQUEST_URI']] : $defaultDescription ?>">
+    <meta name="keywords" content="<?= isset($keywords[$_SERVER['REQUEST_URI']]) ? $keywords[$_SERVER['REQUEST_URI']] : $defaultKeywords ?>">
     <title>
         <?= isset($titles[$_SERVER['REQUEST_URI']]) ? $titles[$_SERVER['REQUEST_URI']] . $garageTitle : 'Garage-V-Parrot' . $garageTitle ?>
     </title>
@@ -34,7 +32,7 @@ include 'partials/head.php';
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
         <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <img src="images/logo.png
-        " alt="logo-garage-V-parrot" width="120" height="30"></a>
+        " alt="logo-garage-V-parrot" width="80" height="30"></a>
         <nav class="navbar">
             <a data-aos="zoom-in-left" data-aos-delay="300" href="index.php">Accueil</a>
             <a data-aos="zoom-in-left" data-aos-delay="450" href="services.php">Nos Services </a>

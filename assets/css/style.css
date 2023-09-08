@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
@@ -102,8 +102,6 @@ section {
   margin: 0 1rem;
 }
 
-
-
 .header .navbar a:hover {
   color:#90ee90;  
 }
@@ -135,30 +133,12 @@ section {
   margin-top: 9rem;
   width: 90%;
   border-radius: 1rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(../images/home-bg.jpg) no-repeat;
-  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../images/car.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 40vh;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 5rem;
+ 
 }
 
 .home .content {
   text-align: center;
 }
-/* .home .jumbotron .breadcrumb {
-  color: #90ee90;
-} */
 
 .home .content span {
   font-weight: bolder;
