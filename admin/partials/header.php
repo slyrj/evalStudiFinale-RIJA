@@ -48,19 +48,22 @@ $pageTitle = $titleMappings[$currentUrl] ?? 'Titre par défaut';
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="nav-link active"><a href="<?= ROOT_URL ?>index.php" target="_blank">Voir le site</a></li>
-                    <li><a class="nav-link" href="<?= ROOT_URL . "admin/" ?>">Gérer les voitures</a></li>
-                    <li><a class="nav-link" href="<?= ROOT_URL . "admin/messages.php" ?>">Lire les messages</a></li>
-                    <li><a class="nav-link" href="<?= ROOT_URL . 'admin/manage-reviews.php' ?>">Gérer les
-                            témoignages</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="<?= ROOT_URL ?>index.php" target="_blank">Voir
+                            le site</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= ROOT_URL . "admin/" ?>">Gérer les voitures</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="<?= ROOT_URL . "admin/messages.php" ?>">Lire les
+                            messages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= ROOT_URL . 'admin/manage-reviews.php' ?>">Gérer
+                            les témoignages</a></li>
                     <?php if ($_SESSION['user_is_admin'] == 1) : ?>
                     <?php include 'admin-menu.php'; ?>
                     <?php endif; ?>
-                    <li><a class="nav-link" class="exit" href="<?= ROOT_URL . "connexion.php" ?>">Se déconnecter</a>
-                    </li>
-                    <li></li>
+                    <li class="nav-item"><a class="nav-link exit" href="<?= ROOT_URL . "connexion.php" ?>">Se
+                            déconnecter</a></li>
                 </ul>
             </div>
+
         </div>
     </div>
     <div class="jumbotron top-space">
