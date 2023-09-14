@@ -48,11 +48,9 @@ $garage_id_row = $stmt_garage_id->fetch(PDO::FETCH_ASSOC);
 
                     <label for="garage_status">Statut :</label>
                     <select name="garage_status" id="garage_status">
-                        <option value="1"
-                            <?= isset($garage['is_opened']) && $garage['is_opened'] == 1 ? 'selected' : '' ?>>Ouvert
+                        <option value="1" <?= isset($garage['is_opened']) && $garage['is_opened'] == 1 ? 'selected' : '' ?>>Ouvert
                         </option>
-                        <option value="0"
-                            <?= isset($garage['is_opened']) && $garage['is_opened'] == 0 ? 'selected' : '' ?>>Fermé
+                        <option value="0" <?= isset($garage['is_opened']) && $garage['is_opened'] == 0 ? 'selected' : '' ?>>Fermé
                         </option>
                     </select>
                     <button type="submit">Enregistrer</button>
@@ -60,13 +58,13 @@ $garage_id_row = $stmt_garage_id->fetch(PDO::FETCH_ASSOC);
             </div>
         </div>
         <div class="col-md-6 widget">
-            <h3 class="widget-title">Horaires d'ouverture</h3>
+            <h3 class="widget-title">Horaires hebdomadaire</h3>
             <div class="widget-body">
                 <?php if (isset($_SESSION['user_is_admin'])) : ?>
-                <form action="logic/manage-opening-hours.php" method="post">
-                    <input type="hidden" name="garage_id" value="<?= $garage_id ?>">
-                    <div class="checkbox-group">
-                        <?php
+                    <form action="logic/manage-opening-hours.php" method="post">
+                        <input type="hidden" name="garage_id" value="<?= $garage_id ?>">
+                        <div class="checkbox-group">
+                            <?php
                             $days = array(
                                 1 => "Lundi",
                                 2 => "Mardi",
@@ -76,18 +74,18 @@ $garage_id_row = $stmt_garage_id->fetch(PDO::FETCH_ASSOC);
                                 6 => "Samedi",
                             );
                             ?>
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Jour</th>
-                                <th>Ouverture</th>
-                                <th>Fermeture</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($days as $day => $dayName) : ?>
-                            <?php
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Jour</th>
+                                    <th>Ouverture</th>
+                                    <th>Fermeture</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($days as $day => $dayName) : ?>
+                                    <?php
                                     // Récupération des horaires d'ouverture et de fermeture à partir de la base de données
                                     $query = "SELECT opening_time, closing_time FROM opening_hours WHERE day = ?";
                                     $stmt = $pdo->prepare($query);
@@ -96,28 +94,25 @@ $garage_id_row = $stmt_garage_id->fetch(PDO::FETCH_ASSOC);
                                     $opening_time = $row['opening_time'];
                                     $closing_time = $row['closing_time'];
                                     ?>
-                            <tr>
-                                <td>
-                                    <label for='selected_days_<?= $day ?>'>
-                                        <input type='checkbox' name='selected_days[]' value='<?= $day ?>'
-                                            id='selected_days_<?= $day ?>'>
-                                        <?= $dayName ?>
-                                    </label>
-                                </td>
-                                <td>
-                                    <input type='time' name='opening_time_<?= $day ?>' value='<?= $opening_time ?>'
-                                        placeholder='Ouverture'>
-                                </td>
-                                <td>
-                                    <input type='time' name='closing_time_<?= $day ?>' value='<?= $closing_time ?>'
-                                        placeholder='Fermeture'>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                    <button type="submit">Enregistrer</button>
-                </form>
+                                    <tr>
+                                        <td>
+                                            <label for='selected_days_<?= $day ?>'>
+                                                <input type='checkbox' name='selected_days[]' value='<?= $day ?>' id='selected_days_<?= $day ?>'>
+                                                <?= $dayName ?>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type='time' name='opening_time_<?= $day ?>' value='<?= $opening_time ?>' placeholder='Ouverture'>
+                                        </td>
+                                        <td>
+                                            <input type='time' name='closing_time_<?= $day ?>' value='<?= $closing_time ?>' placeholder='Fermeture'>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                        <button type="submit">Enregistrer</button>
+                    </form>
                 <?php else : ?>
                 <?php endif; ?>
             </div>

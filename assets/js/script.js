@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // FONCTION FILTRE
-
-// });
 $(document).ready(function () {
   // Écouteur d'événements pour les changements de curseur et de sélection
   $('#price-range, #mileage-range, #year-select').on(
@@ -28,17 +26,15 @@ $(document).ready(function () {
       var price = parseInt($('#price-range').val());
       var mileage = parseInt($('#mileage-range').val());
       var year = parseInt($('#year-select').val());
-
       // Boucle de chaque voiture / envoie au filtre
       $('.box').each(function () {
         var carPrice = parseInt($(this).data('price'));
         var carMileage = parseInt($(this).data('mileage'));
         var carYear = parseInt($(this).data('year'));
-
         // Vérification des conditions du filtre
         var showCar = true;
         if (price > 0 && carPrice > price) {
-          showCar = false;
+          showCar = false; 
         }
         if (mileage > 0 && carMileage > mileage) {
           showCar = false;
@@ -46,7 +42,6 @@ $(document).ready(function () {
         if (year > 0 && carYear < year) {
           showCar = false;
         }
-
         // Affichage / masquage de la voiture en fonction du filtre
         if (showCar) {
           $(this).show();

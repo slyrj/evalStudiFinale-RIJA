@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
         $_SESSION['add-car-error'] = "Erreur lors de l'upload de l'image.";
-        header('location: ' . ROOT_URL . 'admin/'); // Redirection vers la page de gestion des voitures avec un message d'erreur
+        header('location: ' . ROOT_URL . 'admin/'); 
         exit();
     }
 }
