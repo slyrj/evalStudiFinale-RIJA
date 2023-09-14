@@ -25,7 +25,25 @@
   => CREATE DATABASE garage DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
      USE garage;
 
-### Méthode 1 : Création manuelle des tables (Site sans données)
+
+### Méthode 1: Création automatique des tables avec avec des données (recommandée)
+
+- Après avoir créé la base de données 'garage', fermez mysql 
+
+ => exit
+
+- Uploadez dans votre base de données 'garage' le fichier "garage_backup.sql" qui se trouve dans le dossier sql du dépôt git  
+
+ => mysql -u root -p garage < "le-chemin-versle-fichier"\garage_backup.sql
+
+  ![Image commande sql upload  backup](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/backup.png)
+
+ ![Image fichier backup dans dsossier sql](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/back-up.png)
+
+ **Le mot de passe de l'utilisateur(admin) 'vparrot@mail.fr' est 'garageparrot' 
+  **Le mot de passe de l'utilisateur(employé) 'john@doe.fr' est 'john@doe' 
+
+### Méthode 2 : Création manuelle des tables (Site sans données)
 - Copiez et collez ces lignes de commande:
 
 CREATE TABLE users (
@@ -142,22 +160,15 @@ VALUES ('Lundi', '08:30:00', '18:30:00', 1),
   ('Jeudi', '08:30:00', '18:30:00', 1),
   ('Vendredi', '08:30:00', '18:30:00', 1),
   ('Samedi', '09:30:00', '15:00:00', 1);
+INSERT INTO services (name, image)
+VALUES ('Entretien',  '64fb203cb95c5.png');
+INSERT INTO operations (service_id, name)
+VALUES (1,  'Contrôle des fluides'),
+(1,  'Changement des filtres'),
+(1,  'Changement des bougies');
+  INSERT INTO cars (users_id, name, price, image, year, mileage, created_at )
+VALUES (1,  Fiat',4500,'64f4529d67ff7.jpg',1968, 130000,'2023-09-08 15:29:53');
 
-  **Le mot de passe de l'utilisateur(admin) 'vparrot@mail.fr' est 'garageparrot' 
-
-### Méthode 2: Création automatique des tables (Site avec des données)
-
-- Après avoir créé la base de données 'garage', fermez mysql 
-
- => exit
-
-- Uploadez dans votre base de données 'garage' le fichier "garage_backup.sql" qui se trouve dans le dossier sql du dépôt git  
-
- => mysql -u root -p garage < "le-chemin-versle-fichier"\garage_backup.sql
-
- ![Image fichier backup dans dsossier sql](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/back-up.png)
-
-  **Le mot de passe de l'utilisateur(employé) 'john@doe.fr' est 'john@doe' 
 
  - Ouvrez le site  dans votre éditeur de code 
 

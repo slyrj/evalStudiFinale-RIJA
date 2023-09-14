@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
         if (!in_array($extension, $allowed_files)) {
             $_SESSION['add-car-images-error'] = "Le format de l'image n'est pas valide. Les formats autorisés sont : png, jpg, jpeg";
         } elseif ($image['size'] > 1000000) {
-            $_SESSION['add-car-images-error'] = "La taille de l'image ne doit pas d�passer 1 MB";
+            $_SESSION['add-car-images-error'] = "La taille de l'image ne doit pas dépasser 1 MB";
         } else {
             if (move_uploaded_file($image_tmp_name, $image_destination_path)) {
                 $insert_image_query = "INSERT INTO car_images (cars_id, image_url) VALUES (:car_id, :image_name)";
