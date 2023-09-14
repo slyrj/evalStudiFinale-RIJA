@@ -155,7 +155,7 @@ VALUES ('Lundi', '08:30:00', '18:30:00', 1),
 
  => mysql -u root -p garage < "le-chemin-versle-fichier"\garage_backup.sql
 
- ![Image fichier backup dans dsossier sql](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/vsc.png)
+ ![Image fichier backup dans dsossier sql](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/back-up.png)
 
   **Le mot de passe de l'utilisateur(employé) 'john@doe.fr' est 'john@doe' 
 
