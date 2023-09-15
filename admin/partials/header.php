@@ -1,6 +1,5 @@
 <?php
 session_start();
-//include __DIR__ . '/../config/constants.php';
 include __DIR__ . '/../config/database.php';
 
 include __DIR__ . '/../partials/titles.php';
@@ -24,7 +23,6 @@ $pageTitle = $titleMappings[$currentUrl] ?? 'Titre par défaut';
     <title>
         <?= isset($titleMappings[$currentUrl]) ? $titleMappings[$currentUrl] : 'Page d\'administration' ?><?= $garageTitle ?>
     </title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="shortcut icon" href="assets/images/gt_favicon.png">
     <link rel="stylesheet" href="admin/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,7 +39,7 @@ $pageTitle = $titleMappings[$currentUrl] ?? 'Titre par défaut';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <img src="images/logo.png
+                <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <img src="<?= ROOT_URL ?>images/logo.png
         " alt="logo-garage-V-parrot" width="80" height="30"></a>
             </div>
             <div class="navbar-collapse collapse">
