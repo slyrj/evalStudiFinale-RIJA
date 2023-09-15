@@ -1,4 +1,4 @@
-# Site Garage-V-Parrotgit
+# Site Garage-V-Parrot
 
 
 
@@ -18,7 +18,7 @@
   ![session mysql en image](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/mysql.png)
 
 
-  => votre mot de passe
+  => Entrez votre mot de passe
 
   Crééz la base de données
 
@@ -185,3 +185,5 @@ VALUES (1,  Fiat',4500,'64f4529d67ff7.jpg',1968, 130000,'2023-09-08 15:29:53');
  ** config/constants.php **
 
  ![<image fichier database.php](https://github.com/slyrj/evalStudiFinale-RIJA/blob/main/readme-img/constants.png)
+
+ ## Projet Garage-V-Parrot par RAKOTOSON RIJA - SEPTEMBRE 2023
