@@ -12,7 +12,3 @@ if ($garage_result && mysqli_num_rows($garage_result) > 0) {
     }
 }
 echo "<p>Le garage est actuellement</p><br><br><p>$garageStatus</p>";
-?>
-
-<!-- <p><i class="fa-solid fa-door-closed"></i><br><br>
-                        Actuellement fermé </p> -->

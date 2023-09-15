@@ -17,7 +17,6 @@ $garage_id_query = "SELECT id FROM garages WHERE users_id = ?";
 $stmt_garage_id = $pdo->prepare($garage_id_query);
 $stmt_garage_id->execute([$admin_id]);
 $garage_id_row = $stmt_garage_id->fetch(PDO::FETCH_ASSOC);
-//$garage_id = $garage_id_row['id'];
 
 ?>
 <header id="head" class="secondary">

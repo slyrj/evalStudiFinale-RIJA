@@ -67,7 +67,7 @@ $services = $result_services->fetchAll(PDO::FETCH_ASSOC);
                             <td>
                                 <ul>
                                     <?php
-                                    // Récupérer les opérations liées à ce service depuis la base de données
+                                    // Récup les opérations liées à ce service depuis la base de données
                                     $service_id = $service['id'];
                                     $query_operations = "SELECT * FROM operations WHERE service_id = :service_id";
                                     $statement_operations = $pdo->prepare($query_operations);

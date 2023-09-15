@@ -18,11 +18,11 @@ if (isset($_GET['id'])) {
     <h2>Ajouter et Gérer les Images</h2>
 
     <?php if (isset($_SESSION['add-car-image'])) : ?>
-        <p class="text-center text-danger"><?php echo $_SESSION['add-car-image']; ?></p>
-        <?php unset($_SESSION['add-car-image']); ?>
+    <p class="text-center text-danger"><?php echo $_SESSION['add-car-image']; ?></p>
+    <?php unset($_SESSION['add-car-image']); ?>
     <?php elseif (isset($_SESSION['delete-car-image'])) : ?>
-        <p class="text-center text-success"><?php echo $_SESSION['delete-car-image']; ?></p>
-        <?php unset($_SESSION['delete-car-image']); ?>
+    <p class="text-center text-success"><?php echo $_SESSION['delete-car-image']; ?></p>
+    <?php unset($_SESSION['delete-car-image']); ?>
     <?php endif; ?>
 
     <form action="logic/add-car-images.php" method="post" enctype="multipart/form-data">
@@ -44,15 +44,17 @@ if (isset($_GET['id'])) {
     $images = $imagesStatement->fetchAll(PDO::FETCH_ASSOC);
 
     if (!empty($images)) : ?>
-        <h3>Gérer les Images</h3>
-        <div class="row">
-            <?php foreach ($images as $image) : ?>
-                <div class="col-md-3 mb-4 mt-4">
-                    <img src="<?= ROOT_URL . 'admin/assets/gallery/' . $image['image_url']; ?>" alt="Image <?= $image['id']; ?>" class="img-fluid" style="max-height: 150px; max-width: 300px; margin-top: 20px;">
-                    <a href="logic/delete-car-image.php?id=<?= $image['id']; ?>" style="margin-top: 10px;" class="btn btn-danger btn-sm">Supprimer</a>
-                </div>
-            <?php endforeach; ?>
+    <h3>Gérer les Images</h3>
+    <div class="row">
+        <?php foreach ($images as $image) : ?>
+        <div class="col-md-3 mb-4 mt-4">
+            <img src="<?= ROOT_URL . 'admin/assets/gallery/' . $image['image_url']; ?>" alt="Image <?= $image['id']; ?>"
+                class="img-fluid" style="max-height: 150px; max-width: 300px; margin-top: 20px;">
+            <a href="logic/delete-car-image.php?id=<?= $image['id']; ?>" style="margin-top: 10px;"
+                class="btn btn-danger btn-sm">Supprimer</a>
         </div>
+        <?php endforeach; ?>
+    </div>
     <?php endif; ?>
 
     <div style="margin-top: 20px;">

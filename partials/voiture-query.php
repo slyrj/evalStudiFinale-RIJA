@@ -3,7 +3,6 @@
 if (isset($_GET['id'])) {
     $carId = $_GET['id'];
 } else {
-    // Rediriger vers la page des voitures si l'ID n'est pas fourni
     header('Location: voiture.php');
     exit();
 }

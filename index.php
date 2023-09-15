@@ -37,7 +37,6 @@ $reviews_result = mysqli_query($connection, $get_reviews_query);
         <p>Le Garage V. Parrot est une entreprise familiale fondée en 1972 par Vincent Parrot. Passionné de mécanique
             depuis son plus jeune âge, Vincent a appris le métier auprès de son père. Il a ensuite ouvert son propre
             garage en 1995, et depuis, il n'a cessé de se perfectionner et de s'équiper des dernières technologies.</p>
-        <!-- <a href="#" class="btn">read more</a> -->
         <p>L'équipe du Garage V. Parrot est composée de mécaniciens qualifiés et expérimentés. Ils sont tous passionnés
             par leur métier et ils sont toujours à la recherche des meilleures solutions pour leurs clients.</p>
     </div>

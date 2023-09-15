@@ -19,18 +19,12 @@ include 'partials/head.php';
     <title>
         <?= isset($titles[$_SERVER['REQUEST_URI']]) ? $titles[$_SERVER['REQUEST_URI']] . $garageTitle : 'Garage-V-Parrot' . $garageTitle ?>
     </title>
-
-
     <!-- lien cdn font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- aos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!-- liens personnalisés  -->
     <link rel="stylesheet" href="<?= ROOT_URL . '/assets/css/style.css' ?>">
-   
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
