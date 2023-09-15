@@ -345,6 +345,22 @@ section {
 .sale .box-container .box .content a i {
   padding-right: .5rem;
 }
+.price-badge {
+  text-align: center;
+}
+.car-price {
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color:  #fdc939; 
+  border: 0.2rem solid   #90ee90;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: none;
+}
 .services .heading  {
  padding-top: 10rem;
 }
@@ -482,69 +498,6 @@ section {
 .review .box-container .box .user span {
   color: #aaa;
   font-size: 1.5rem;
-}
-.blogs .box-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-  gap: 1.5rem;
-}
-.blogs .box-container .box {
-  border-radius: 1rem;
-  background: #222;
-  overflow: hidden;
-}
-.blogs .box-container .box:hover .image img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-.blogs .box-container .box .image {
-  height: 25rem;
-  overflow: hidden;
-  width: 100%;
-}
-.blogs .box-container .box .image img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.blogs .box-container .box .content {
-  padding: 2rem;
-}
-.blogs .box-container .box .content .link {
-  font-size: 2rem;
-  color: #90ee90;
-}
-.blogs .box-container .box .content .link:hover {
-  color: #fdc939;  
-}
-.blogs .box-container .box .content p {
-  padding: 1rem 0;
-  font-size: 1.4rem;
-  color: #aaa;
-  line-height: 2;
-}
-.blogs .box-container .box .content .icon {
-  padding-top: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.blogs .box-container .box .content .icon a {
-  font-size: 1.4rem;
-  color: #aaa;
-}
-
-.blogs .box-container .box .content .icon a:hover {
-  color: #fdc939;  
 }
 .banner {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(../images/banner-bg.jpg) no-repeat;

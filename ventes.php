@@ -48,12 +48,15 @@ while ($row = mysqli_fetch_assoc($result)) {
         <?php foreach ($cars as $car) : ?>
         <div class="box" data-aos="fade-up" data-aos-delay="150" data-price="<?php echo $car['price']; ?>"
             data-mileage="<?php echo $car['mileage']; ?>" data-year="<?php echo $car['year']; ?>">
+            <div class="price-badge">
+                <p class="car-price"><?php echo $car['price']; ?> €</p>
+            </div>
             <div class="image">
-                <img src="<?php echo ROOT_URL . '/admin/assets/images/' . $car['image']; ?>" alt="">
+                <img src="<?php echo ROOT_URL . '/admin/assets/images/' . $car['image']; ?>"
+                    alt="Image <?php echo $service['nom']; ?>">
             </div>
             <div class="content">
                 <h3><?php echo $car['name']; ?></h3>
-                <p class="car-price">Prix : <?php echo $car['price']; ?> €</p>
                 <p class="car-year">Année : <?php echo $car['year']; ?></p>
                 <p class="car-mileage">Kilométrage : <?php echo $car['mileage']; ?> km</p>
                 <a href="<?php echo ROOT_URL . '/voiture.php?id=' . $car['id']; ?>">Voir plus <i
